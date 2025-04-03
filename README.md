@@ -13,10 +13,6 @@
 3. [安装与使用](#安装与使用)
    - [前提条件](#前提条件)
    - [快速启动](#快速启动)
-4. [配置说明](#配置说明)
-5. [常见问题](#常见问题)
-6. [贡献指南](#贡献指南)
-7. [许可证](#许可证)
 
 ---
 
@@ -53,3 +49,22 @@ SMTP 容器是一个轻量级的邮件发送服务，基于 Postfix 邮件服务
 ```bash
 git clone https://github.com/elttwl/smtp-server.git
 cd smtp-server
+
+#### **(2) 构建 Docker 镜像**
+```bash
+./build.sh
+
+##### 基础镜像
+[Ubuntu](https://hub.docker.com/_/ubuntu/)
+
+#### **(3) 启动容器**
+```bash
+docker compose up -d
+
+##### 选项
+编辑.env文件修改参数。
+- MY_USER=myuser # SMTP用户
+- MY_PASSWORD=mypassword # SMTP用户密码
+- MY_HOSTNAME=example.com # SMTP主机名
+- MY_DOMAIN=example.com # SMTP域名
+- MY_NETWORKS=0.0.0.0/0 # 允许访问的网络
