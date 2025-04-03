@@ -1,4 +1,4 @@
-# SMTP 容器项目
+# SMTP 服务
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/elttwl/smtp-server)
 ![Docker](https://img.shields.io/badge/Docker-v28.0.1-blue)
