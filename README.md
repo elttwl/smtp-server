@@ -49,10 +49,12 @@ SMTP 容器是一个轻量级的邮件发送服务，基于 Postfix 邮件服务
 ```bash
 git clone https://github.com/elttwl/smtp-server.git
 cd smtp-server
+```
 
 #### **(2) 构建 Docker 镜像**
 ```bash
 ./build.sh
+```
 
 ##### 基础镜像
 [Ubuntu](https://hub.docker.com/_/ubuntu/)
@@ -60,6 +62,7 @@ cd smtp-server
 #### **(3) 启动容器**
 ```bash
 docker compose up -d
+```
 
 ##### 选项
 编辑.env文件修改参数。
