@@ -3,7 +3,7 @@ services:
     image: elttwl/smtp-server:latest
     container_name: elttwl-smtp-server
     ports:
-      - "2525:25"
+      - "25:25"
     env_file:
       - .env
     restart: always
