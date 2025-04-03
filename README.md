@@ -66,8 +66,8 @@ docker compose up -d
 
 ##### 选项
 编辑.env文件修改参数。
-- MY_USER=myuser # SMTP用户
-- MY_PASSWORD=mypassword # SMTP用户密码
-- MY_HOSTNAME=example.com # SMTP主机名
-- MY_DOMAIN=example.com # SMTP域名
-- MY_NETWORKS=0.0.0.0/0 # 允许访问的网络
+- `MY_USER=myuser` # SMTP用户
+- `MY_PASSWORD=mypassword` # SMTP用户密码
+- `MY_HOSTNAME=example.com` # SMTP主机名
+- `MY_DOMAIN=example.com` # SMTP域名
+- `MY_NETWORKS=0.0.0.0/0` # 允许访问的网络
