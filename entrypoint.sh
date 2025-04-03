@@ -31,8 +31,6 @@ smtpd_recipient_restrictions = permit_mynetworks, permit_sasl_authenticated, rej
 smtpd_tls_security_level = none
 compatibility_level = 3.6
 maillog_file = /dev/stdout
-smtp_dns_support_level = enabled
-inet_protocols = ipv4
 EOF
 
 # 动态生成 Dovecot 配置文件
@@ -66,7 +64,7 @@ logfile=/dev/null
 pidfile=/var/run/supervisord.pid
 
 [program:postfix]
-command=/usr/sbin/postfix start-fg
+command=/usr/sbin/service postfix start
 autostart=true
 autorestart=true
 stderr_logfile=/dev/stderr
