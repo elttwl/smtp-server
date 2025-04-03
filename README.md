@@ -3,6 +3,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/elttwl/smtp-server)
 ![Docker](https://img.shields.io/badge/Docker-v28.0.1-blue)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-v24.04-blue)
+![Postfix](https://img.shields.io/badge/Postfix-v3.8.6-blue)
+![Dovecot](https://img.shields.io/badge/Dovecot-v2.3.21-blue)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/elttwl/smtp-server)
 
 
