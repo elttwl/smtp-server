@@ -1,6 +1,10 @@
 # SMTP 容器项目
 
-![GitHub](https://img.shields.io/badge/Status-Active-green) ![Docker](https://img.shields.io/badge/Docker-Supported-blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/elttwl/smtp-server)
+![Docker](https://img.shields.io/badge/Docker-v28.0.1-blue)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-v24.04-blue)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/elttwl/smtp-server)
+
 
 本项目旨在提供一个基于 Docker 的 SMTP 服务器容器，用于发送电子邮件。它适用于开发环境、测试邮件服务或生产环境中的轻量级邮件发送需求。
 
@@ -64,8 +68,8 @@ cd smtp-server
 docker compose up -d
 ```
 
-##### 选项
-编辑.env文件修改参数。
+##### 环境变量
+编辑.env文件修改环境变量。
 - `MY_USER=myuser` # SMTP用户
 - `MY_PASSWORD=mypassword` # SMTP用户密码
 - `MY_HOSTNAME=example.com` # SMTP主机名
