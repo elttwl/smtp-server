@@ -58,7 +58,6 @@ chmod 750 /var/spool/postfix/private
 # 动态生成 Supervisord 配置文件
 cat <<EOF > /etc/supervisor/supervisord.conf
 [supervisord]
-[supervisord]
 nodaemon=true
 logfile=/dev/null
 pidfile=/var/run/supervisord.pid
