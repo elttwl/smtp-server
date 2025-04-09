@@ -19,6 +19,9 @@
 3. [安装与使用](#安装与使用)
    - [前提条件](#前提条件)
    - [快速启动](#快速启动)
+4. [常见问题](#常见问题)
+   - [DNS 解析失败](#1.DNS 解析失败)
+   - [SPF 检查失败](#2.SPF 检查失败)
 
 ---
 
@@ -58,6 +61,7 @@ cd smtp-server
 ```
 
 #### **(2) 构建 Docker 镜像**
+
 ```bash
 ./build.sh
 ```
@@ -77,3 +81,27 @@ docker compose up -d
 - `MY_HOSTNAME=example.com` # SMTP主机名
 - `MY_DOMAIN=example.com` # SMTP域名
 - `MY_NETWORKS=0.0.0.0/0` # 允许访问的网络
+
+## **常见问题**
+
+#### **1.DNS 解析失败**
+
+##### **报错**
+```bash
+example postfix/smtp[129]: 9B9CCB6612F: to=<elttwl@qq.com>, relay=none, delay=0.02, delays=0.01/0.01/0/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=qq.com type=MX: Host not found, try again)
+```
+##### **解决方法**
+进入容器执行service postfix restart重启postfix服务
+```bash
+docker exec -it -u0 elttwl-smtp-server /bin/bash
+root@7c04d370230a:/# service postfix restart
+```
+
+#### **2.SPF 检查失败**
+
+##### **报错**
+```bash
+example postfix/smtp[417]: 5FCC6B66455: to=<elttwl@qq.com>, relay=mx3.qq.com[59.36.124.165]:25, delay=0.73, delays=0.01/0.01/0.18/0.53, dsn=5.0.0, status=bounced (host mx3.qq.com[59.36.124.165] said: 550 SPF check failed [MHPq59EnwWnnM2tSL4bvrVEKOVVHKNfjuxAsCqMyAPcMwoY0AikKkglVMn3WLmuSwQ==  IP: X.X.X.X]. https://service.mail.qq.com/detail/122/72. (in reply to end of DATA command))
+```
+##### **解决方法**
+更改自己的发件人域名
