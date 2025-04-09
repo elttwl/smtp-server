@@ -3,7 +3,7 @@ FROM ubuntu:24.04
 
 LABEL maintainer="elttwl <elttwl@qq.com>"
 LABEL imagename="elttwl/smtp-server"
-LABEL version="1.0"
+LABEL version="2.1"
 LABEL description="This is a custom SMTP server image with Postfix and Dovecot."
 
 # 设置环境变量以避免交互式安装时的提示
