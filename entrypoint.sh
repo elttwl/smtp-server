@@ -63,7 +63,7 @@ logfile=/dev/null
 pidfile=/var/run/supervisord.pid
 
 [program:postfix]
-command=/usr/sbin/service postfix start
+command=/usr/sbin/postfix start-fg
 autostart=true
 autorestart=true
 stderr_logfile=/dev/stderr
