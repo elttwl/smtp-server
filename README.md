@@ -20,8 +20,8 @@
    - [前提条件](#前提条件)
    - [快速启动](#快速启动)
 4. [常见问题](#常见问题)
-   - [DNS 解析失败](#1.DNS 解析失败)
-   - [SPF 检查失败](#2.SPF 检查失败)
+   - [DNS 解析失败](#[1.DNS 解析失败])
+   - [SPF 检查失败](#[2.SPF 检查失败])
 
 ---
 
@@ -96,6 +96,7 @@ example postfix/smtp[129]: 9B9CCB6612F: to=<elttwl@qq.com>, relay=none, delay=0.
 docker exec -it -u0 elttwl-smtp-server /bin/bash
 root@7c04d370230a:/# service postfix restart
 ```
+ℹ️这个问题目前没查到具体的原因，有知道的朋友可以联系elttwl@qq.com。
 
 #### **2.SPF 检查失败**
 
